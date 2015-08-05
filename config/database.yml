@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 100
+  username: postgres
+  password: diablo8138
+  host: localhost
+
+development:
+  <<: *default
+  database: web_sock
+
+test:
+  <<: *default
+  database: web_sock_test

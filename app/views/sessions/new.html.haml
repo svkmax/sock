@@ -1,0 +1,4 @@
+= form_for :session, url: sessions_path do |f|
+  = f.label :email, 'Enter a username'
+  = f.text_field :email
+  = f.submit 'Start chatting'
