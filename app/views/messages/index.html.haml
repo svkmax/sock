@@ -1,12 +1,37 @@
-Signed in as @#{cookies.signed[:email]}.
-%br/
-%br/
-#messages
-%br/
-%br/
-= form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f|
-  = f.label :body, 'Enter a message:'
-  %br/
-  = f.text_field :body
-  %br/
-  = f.submit 'Send message'
+.messages
+  Chat room:
+
+  #messages
+.users
+  .user
+    Signed in as @temp 1.
+    = form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f|
+      = f.label :body, 'Enter a message:'
+      = f.hidden_field :user, :value => "Morpheus"
+      %br/
+      = f.text_field :body
+      %br/
+      %br/
+      = f.submit 'Send message'
+
+  .user
+    Signed in as @temp 2.
+    = form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f|
+      = f.label :body, 'Enter a message:'
+      %br/
+      = f.text_field :body
+      = f.hidden_field :user, :value => "NEO"
+      %br/
+      %br/
+      = f.submit 'Send message'
+
+  .user
+    Signed in as @temp 3.
+    = form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f|
+      = f.label :body, 'Enter a message:'
+      %br/
+      = f.text_field :body
+      = f.hidden_field :user, :value => "Trinity"
+      %br/
+      %br/
+      = f.submit 'Send message'

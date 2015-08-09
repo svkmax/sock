@@ -47,5 +47,3 @@ end
 gem 'actioncable', github: "rails/actioncable"
 gem 'haml-rails'
 gem 'puma'
-gem 'omniauth'
-gem 'omniauth-google'

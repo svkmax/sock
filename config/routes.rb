@@ -58,5 +58,5 @@ Rails.application.routes.draw do
   resources :messages, only: [:index, :create]
   resources :sessions, only: [:new, :create]
   get 'sing_up', to: 'sessions#create'
-  root 'sessions#new'
+  root 'messages#index'
 end

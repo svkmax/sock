@@ -1,7 +1,6 @@
 class MessagesController < ApplicationController
   def create
-    #ActionCable.server.broadcast 'messages', message: render( partial: 'messages/message', locals: { message: params[:message][:body], username: cookies.signed[:email] })
-    ActionCable.server.broadcast 'messages', message: params[:message][:body], username: cookies.signed[:email]
+    ActionCable.server.broadcast 'messages', message: params[:message][:body],  username: params[:message][:user]
     head :ok
   end
 
